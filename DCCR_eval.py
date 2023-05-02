@@ -372,7 +372,7 @@ def resunetcnn(img_filename, save_as, save_as_new_orig, logger, args):
     elif args.intensity_range_mode == 2:
         denoised_image = (denoised_image*(max_orig - min_orig)) + min_orig
         orig_data = (orig_data*(max_orig - min_orig)) + min_orig
-    elif args.intensity_range_mode < 0 or args.intensity_range_mode > 2:
+    elif int(args.intensity_range_mode) <= -1 or int(args.intensity_range_mode) >= 3:
         print("Warning: intensity_range_mode not valid. Valid values are only 0 (0-255), 1 (orig_min - orig_max), and 2 (0-1)")
         print("Storing output with intensity range mode 0 (0-255) ....")
         denoised_image = denoised_image * 255.
