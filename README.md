@@ -41,9 +41,10 @@ git clone https://github.com/waadgo/dccr-net.git
 cd dccr-net
 wget https://www.dropbox.com/s/bbsf24axxmkcui2/model_checkpoints.zip
 unzip model_checkpoints.zip
+pip install -r requirements.txt
 ```
 
 # Execution example in Windows Subsystem for Linux 2 (WSL2):
-`DCCR_eval.py --in_name /mnt/d/sub-01/av_highres_nlin.nii --keep_dims True --intensity_range_mode 0 --suffix dccr`
+`python DCCR_eval.py --in_name /mnt/d/sub-01/av_highres_nlin.nii --keep_dims True --intensity_range_mode 0 --suffix dccr`
 
 
