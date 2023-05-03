@@ -9,11 +9,11 @@ DCCR-Net has been thoroughly tested on T1w in-vivo images with resolutions rangi
 # Usage of the method
 The following are the possible inputs that the evaluation pipeline "DCCR_eval.py" can get:
 
-`--in_name`: string containing the full path to the image to be denoised.
+`--in_name`: string containing the full path to the image to be denoised. Valid input extensions: ".nii", ".nii.gz", ".mgh", ".mgz", ".mnc".
 
 `--suffix`: string containing the suffix of the denoised image. By default it is "dccr".
 
-`--ext`: extension that will be used for the output files. By default it will use the same as the input file specified in `--in_name`.
+`--ext`: extension that will be used for the output files. By default it will use the same as the input file specified in `--in_name`. Valid output extensions: ".nii", ".nii.gz", ".mgh", ".mgz". NOTE: ".mnc" file formats will be read and processed, but will be stored by default in ".nii" format. 
 
 `--out_name`: string containing the full path to the file where the image will be stored WITHOUT EXTENSION. By default it will be the base name of `in_name` + "_"`suffix` + `ext`.
 
@@ -46,6 +46,6 @@ pip3 install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --
 ```
 
 # Execution example in Windows Subsystem for Linux 2 (WSL2):
-`python DCCR_eval.py --in_name /mnt/d/sub-01/av_highres_nlin.nii --keep_dims True --intensity_range_mode 0 --suffix dccr`
+`python DCCR_eval.py --in_name /full/path/to/mri_image.nii --keep_dims True --intensity_range_mode 0 --suffix dccr`
 
 
