@@ -35,8 +35,10 @@ The following are the possible inputs that the evaluation pipeline "DCCR_eval.py
 
 `--model_path`: string that indicates the folder containing the trained weights of the network. By default is the folder "model_checkpoints".
 
-# Installing DCCR-Net:
+# Installing DCCR-Net inside a conda environment:
 ```
+conda create -n dccr python=3.9
+conda activate dccr
 git clone https://github.com/waadgo/dccr-net.git
 cd dccr-net
 wget https://www.dropbox.com/s/bbsf24axxmkcui2/model_checkpoints.zip
