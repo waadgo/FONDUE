@@ -1,10 +1,10 @@
-# DCCR-Net
-Denoising of anatomical MR Images using Deep Convolutional Neural Networks
+# FONDUE
+Fast Optimized Network for Denoising through residual Unified Ensembles
 
-DCCR-Net currently supports only Windows and Linux. Apple Silicon support is underway. 
+FONDUE currently supports only Windows and Linux. Apple Silicon support is underway. 
 
-DCCR-Net (Deeply-Connected Convolutional Residual Network) is a Convolutional Neural Network intended for denoising anatomical MR Images of any resolution. This method was built with resolution-invariant capabilities, and was trained with a varied and robust corpus with images from datasets of both healthy and diseased individuals.
-DCCR-Net has been thoroughly tested on T1w in-vivo images with resolutions ranging from 1.5mm to 0.25mm of voxel size, GE, Philips and Siemens scanners and Magnetic Fields of 1.5T to 7T. Our tests suggest that the best results will be obtained when using input images with voxel sizes close to isotropic.
+FONDUE is a Convolutional Neural Network intended for denoising anatomical MR Images of any resolution. This method was built with resolution-invariant capabilities, and was trained with a varied and robust corpus with images from datasets of both healthy and diseased individuals.
+FONDUE has been thoroughly tested on T1w in-vivo images with resolutions ranging from 1.5mm to 0.25mm of voxel size, GE, Philips and Siemens scanners and Magnetic Fields of 1.5T to 7T. Our tests suggest that the best results will be obtained when using input images with voxel sizes close to isotropic.
 
 # Usage of the method
 The following are the possible inputs that the evaluation pipeline "DCCR_eval.py" can get:
