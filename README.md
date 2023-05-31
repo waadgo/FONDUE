@@ -40,7 +40,7 @@ The following are the possible inputs that the evaluation pipeline "DCCR_eval.py
 conda create -n fondue python=3.9
 conda activate fondue
 git clone https://github.com/waadgo/FONDUE.git
-cd fondue
+cd FONDUE
 wget https://www.dropbox.com/s/bbsf24axxmkcui2/model_checkpoints.zip
 unzip model_checkpoints.zip
 pip install -r requirements.txt
