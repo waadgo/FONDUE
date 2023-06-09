@@ -1,6 +1,8 @@
 # FONDUE
 Fast Optimized Network for Denoising through residual Unified Ensembles
 
+Paper: https://doi.org/10.1101/2023.06.04.543602
+
 FONDUE currently supports only Windows and Linux. Apple Silicon support is underway. 
 
 FONDUE is a Convolutional Neural Network intended for denoising anatomical MR Images of any resolution. This method was built with resolution-invariant capabilities, and was trained with a varied and robust corpus with images from datasets of both healthy and diseased individuals.
