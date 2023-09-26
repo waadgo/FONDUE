@@ -43,13 +43,13 @@ conda create -n fondue python=3.9
 conda activate fondue
 git clone https://github.com/waadgo/FONDUE.git
 cd FONDUE
-wget https://www.dropbox.com/s/bbsf24axxmkcui2/model_checkpoints.zip
+wget https://zenodo.org/record/8381153/files/model_checkpoints.zip?download=1
 unzip model_checkpoints.zip
 pip install -r requirements.txt
 pip3 install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
 ```
 
 # Execution example in Windows Subsystem for Linux 2 (WSL2):
-`python DCCR_eval.py --in_name /full/path/to/mri_image.nii --keep_dims True --intensity_range_mode 0 --suffix dccr`
+`python fondue_eval.py --in_name /full/path/to/mri_image.nii --keep_dims True --intensity_range_mode 0`
 
 
