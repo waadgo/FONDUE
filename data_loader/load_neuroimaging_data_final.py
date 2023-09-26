@@ -605,7 +605,7 @@ def get_thick_slices_vmap(img_data, map_data, max_size, orig_size, slice_thickne
     map_data_pad = np.expand_dims(np.pad(map_data, ((0, 0), (0, 0), (slice_thickness, slice_thickness)), mode='edge'), axis=3)
     
     img_data_thick = np.ndarray((h, w, d, 0), dtype=np.uint8)
-    map_data_thick = np.ndarray((h, w, d, 0), dtype=np.float)
+    map_data_thick = np.ndarray((h, w, d, 0), dtype=np.float64)
     
     for slice_idx in range(2 * slice_thickness + 1):
         img_data_thick = np.append(img_data_thick, img_data_pad[:, :, slice_idx:d + slice_idx, :], axis=3)
@@ -625,7 +625,7 @@ def get_thick_slices_maponly(map_data, slice_thickness=3):
     
     map_data_pad = np.expand_dims(np.pad(map_data, ((0, 0), (0, 0), (slice_thickness, slice_thickness)), mode='edge'), axis=3)
     
-    map_data_thick = np.ndarray((h, w, d, 0), dtype=np.float)
+    map_data_thick = np.ndarray((h, w, d, 0), dtype=np.float64)
     
     for slice_idx in range(2 * slice_thickness + 1):
         map_data_thick = np.append(map_data_thick, map_data_pad[:, :, slice_idx:d + slice_idx, :], axis=3)
@@ -1000,7 +1000,7 @@ class OrigDataThickSlices(Dataset):
             self.plane = plane
             self.slice_thickness = slice_thickness
             self.anisotropic = anisotropic
-            orig.astype(np.float)
+            orig.astype(np.float64)
             orig = (orig-orig.min())/(orig.max() - orig.min())
             # Transform Data as needed
             if plane == 'Sagittal':
@@ -1059,9 +1059,9 @@ class OrigDataThickSlices(Dataset):
 #         try:
 #             self.plane = plane
 #             self.anisotropic = anisotropic
-#             orig.astype(np.float)
+#             orig.astype(np.float64)
 #             # orig = (orig-orig.min())/(orig.max() - orig.min())
-#             # pre_denoised_image.astype(np.float)
+#             # pre_denoised_image.astype(np.float64)
 #             # pre_denoised_image = (pre_denoised_image - pre_denoised_image.min()) / (pre_denoised_image.max() - pre_denoised_image.min())
 #             # Transform Data as needed
 #             if plane == 'Sagittal':
